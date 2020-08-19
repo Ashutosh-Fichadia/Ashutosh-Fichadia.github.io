@@ -1015,7 +1015,7 @@ a, a:hover {
 }
 .unslate_co--site-mobile-menu .close-wrap a .close-label {
 	margin-right: 20px;
-	color: #000;
+	color: #fff;
 }
 .unslate_co--site-mobile-menu .close-wrap a .close-times {
 	position: relative;
@@ -1050,7 +1050,7 @@ a, a:hover {
 	padding-bottom: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
-	color: #000;
+	color: #fff;
 }
 .unslate_co--site-mobile-menu ul a:hover, .unslate_co--site-mobile-menu ul li a:hover {}
 .unslate_co--site-mobile-menu ul > li > ul > li > a {
