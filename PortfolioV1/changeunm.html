@@ -1,11 +1,4 @@
-<?php
-	session_start();
-	if(!isset($_SESSION["uname"]))
-	{
-		header('location: index.php');
-	}
 
-?>
 <!doctype html>
 <html>
 <head>
@@ -101,29 +94,7 @@
 						</form>					
 					</div>
 					
-					<?php
-						if(isset($_REQUEST["btn"]))
-						{
-							$nunm = $_REQUEST["uname"];
-							$mail= $_REQUEST["email"];
-                                                        
-							include("db.php");
-							$uqry= "update titan SET username='$nunm' WHERE email='$mail'";
-							if(mysqli_query($conn,$uqry))
-							{
-								echo '<script>alert("Username Updated Successfully!")</script>';
-								$_SESSION["uname"]=$nunm;
-								
-							}
-							else
-							{
-								echo '<script>alert("Username Update Failed!")</script>';
-							}
-						}
 					
-					
-					
-					?>
 					<div class="col-sm-5">
 						<h4 class="font-alt">CHANGE PASSWORD</h4>
 						<hr class="divider-w mb-10">
@@ -148,42 +119,7 @@
 								<input type="SUBMIT" class="btn btn-block btn-round btn-b" name="rbtn">
 							</div>
 						</form>
-						<?php
-							if(isset($_REQUEST["rbtn"]))
-							{
-								$oldp=$_REQUEST["op"];
-								$np=$_REQUEST["password"];
-								$rnp=$_REQUEST["re-password"];
-                                                                if($oldp==$_SESSION["pas1"])
-                                                                {
-                                                                        if($oldp==$np)
-                                                                        {
-                                                                                echo '<script>alert("Try a new password !")</script>';
-                                                                                
-                                                                        }	
-                                                                        else
-                                                                        {	
-                                                                                if($np==$rnp)
-                                                                                {
-                                                                                        $qry= "UPDATE titan SET password='$np' where email='".$_SESSION["email"]."'";
-                                                                                        include("db.php");
-                                                                                        if(mysqli_query($conn,$qry))
-                                                                                        {
-                                                                                                echo '<script>alert("Password Updated Successfully !")</script>';
-                                                                                                $_SESSION["pas1"]=$np;
-                                                                                        }
-                                                                                        else{
-                                                                                                echo '<script>alert("Password Update Failed !")</script>';
-                                                                                        }
-                                                                                }							
-                                                                        }
-                                                                }
-                                                                else
-                                                                {
-                                                                         echo '<script>alert("Old Password is not Correct !")</script>';
-                                                                }
-							}
-						?>
+						
 						
 	
 					
