@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body >
+		
+		<input id="mycl" type="button" onClick="myclcick()" value = "Click Me" onMouseDown="myclick(event.button)" >
+		<div id="myplace1" style="width:300px; height:300px; position: absolute; top:30%; left:40%;background-color:blue "></div>
+	<script>
+		var e = document.getElementById("myplace1");
+		var c = document.getElementById("mycl")
+		var i =0;	
+		function myclick(n)
+		{
+			if(n==0)
+				{
+					setInterval(myleft,100);	
+				}
+			else
+			{
+				setInterval(myright,100);
+			}
+		}
+		function myleft()
+		{
+			e.style.transform="rotate("+i+"deg)";
+			i=i-1;
+		}
+		function myright()
+		{
+			e.style.transform="rotate("+i+"deg)";
+			i=i+1;
+		}
+	
+	
+	
+	</script>
+	
+</body>
+	
+</html>

@@ -1,0 +1,42 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	<script>
+	
+		var data="Friendly It Solution";
+		var n=0;
+		function startFun()
+		{
+			var ee=document.getElementById("ban");
+			
+			
+			var ch=data.charAt(0);
+			data=data.substring(1,data.length);
+			
+			data=data+ch;
+			
+			ee.innerHTML=data;
+			
+		//	startFun();
+			setTimeout("startFun()",100);
+		}
+	
+		
+		
+		
+		
+	</script>
+	
+	
+
+	<h1 id="ban"></h1>
+	<input type="button" value="Start" onClick="startFun()">
+	
+</body>
+</html>

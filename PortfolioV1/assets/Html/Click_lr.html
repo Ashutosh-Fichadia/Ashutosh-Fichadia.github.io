@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+	
+	<input type="button" value="Click Me" onMouseDown="myClick(event.button)">
+	<h1 id="myplace">Click : </h1>
+	
+
+	<script>
+		
+		
+		function myClick(n)
+		{
+			
+			var e=document.getElementById("myplace");
+			
+			if(n==0)
+				{
+					e.innerHTML="Click : left";
+				}
+			else{
+				
+					e.innerHTML="Click :Right";
+			    }
+		}
+		
+		
+	</script>
+	
+	
+</body>
+</html>

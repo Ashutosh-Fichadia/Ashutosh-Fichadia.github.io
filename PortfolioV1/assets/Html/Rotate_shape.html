@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Untitled Document</title>
+	<script>
+		var id;
+		function myStart()
+		{
+				var e =document.getElementById("btnstop");
+				var e1 =document.getElementById("btnstart");
+				var ball = document.getElementById("ball");
+			e.style.display="Block";
+			e1.style.display="None";
+			ball.style.left="0px";
+			ball.style.top="0px";
+			
+			id = setInterval(fun1,10);
+			var pos =200;
+			var deg = 0;
+			var tpos=0;
+			
+			function fun1()
+			{
+				if(tpos==200)
+					{
+						clearInterval(id);
+						pos = 450;
+						id=setInterval(fun2,10);
+					}
+				else
+				{
+					ball.style.left=pos+"px";
+					pos++;
+					ball.style.top=tpos+"px";
+					tpos++;
+					
+					ball.style.transform="rotate("+deg+"deg)";
+					deg--;
+				}
+			}
+			function fun2()
+			{
+				if(tpos==450)
+					{
+				
+						clearInterval(id);
+						//clearInterval
+						pos=200;
+						id=setInterval(fun3,10);
+						
+					}
+				else{
+					ball.style.top=tpos+"px";
+					tpos++;
+					ball.style.left=pos+"px";
+					pos--;
+					
+					ball.style.transform="rotate("+deg+"deg)";
+					deg--;
+				}
+			}
+			function fun3()
+			{
+				
+				
+				if(pos==0)
+					{
+						clearInterval(id);
+						tpos=200;
+						id=setInterval(fun4,10);
+						
+					}
+				else{
+					ball.style.left=pos+"px";
+					pos--;
+					ball.style.top=tpos+"px";
+					tpos--;
+					
+					ball.style.transform="rotate("+deg+"deg)";
+					deg--;
+				}
+			}
+			function fun4()
+			{
+				if(tpos==0)
+					{
+						clearInterval(id);
+						pos=200;
+						id=setInterval(fun1,10);
+						
+					}
+				else{
+					ball.style.left=pos+"px";
+					pos++;
+					ball.style.top=tpos+"px";
+					tpos--;
+					
+					ball.style.transform="rotate("+deg+"deg)";
+					deg--;
+				}
+			}
+			
+		}
+		function myStop()
+		{
+			var e= document.getElementById("btnstop");
+			var e1= document.getElementById("btnstart");
+			e1.style.display="Block";
+			e.style.display="None";
+			clearInterval(id);
+			
+		}
+		
+		
+	
+	</script>
+</head>
+
+<body>
+	<input type="button" id="btnstart" value="Start" onClick="myStart()">
+	<input type="button" id="btnstop" value="Stop" style="display: none" onClick="myStop()">
+	<div style="height: 500px; width: 500px; background-color: black; position: relative;">
+		<img id="ball" src="earth.png" style="height: 50px; width: 50px; position: absolute" alt="Earth_image" >
+		
+	</div>
+</body>
+</html>

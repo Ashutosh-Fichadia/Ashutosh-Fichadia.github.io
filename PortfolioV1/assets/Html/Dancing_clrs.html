@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+</head>
+
+<body>
+	
+	
+	
+	<h1 id="myword" align="center">Ashutosh Fichadia</h1>
+	
+	<h2 style="visibility: hidden">THIS IS content</h2>
+	
+	<script>
+		
+		var e=document.getElementById("myword");
+		var i=0;
+		var clrs=["red","yellow","#f0f","blue","black"];
+	
+		function myclr()
+		{
+			e.style.color=clrs[i++%clrs.length];
+			i++;
+		}
+		
+		setInterval("myclr()",1000);
+		
+		
+	</script>
+</body>
+</html>

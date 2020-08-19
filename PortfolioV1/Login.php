@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<title>AF | Login</title>
+<meta charset="UTF-8">
+
+
+	<!--  Stylesheets
+=============================================
+--><!-- Default stylesheets--><link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"><!-- Template specific stylesheets--><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"><link href="assets/lib/animate.css/animate.css" rel="stylesheet"><link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet"><link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet"><link href="assets/lib/flexslider/flexslider.css" rel="stylesheet"><link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"><link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet"><link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet"><link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet"><!-- Main stylesheet and color file--><link href="assets/css/style.css" rel="stylesheet"><link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+	
+	
+</head>
+<body>
+	<script></script>
+	
+	<div class="page-loader"><div class="loader">Loading...</div></div>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.php">AF</a>
+			</div>
+			<div class="collapse navbar-collapse" id="custom-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="index.php" >HOME</a>
+					</li>
+					
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">PAGES</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="Login.php">LOGIN-REGISTER</a>
+							</li>
+							
+						</ul>
+					</li>
+				</ul>
+				
+			
+		</div>
+	</div>
+	</nav>
+	
+	
+	<div class="main">
+		<section class="module bg-dark-30" data-background="assets/images/login.jpg">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<h1 class="module-title font-alt mb-0">LOGIN-REGISTER</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="module">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5 col-sm-offset-1 mb-sm-40">
+						<h4 class="font-alt">LOGIN</h4>
+						<hr class="divider-w mb-10">
+						
+						<form class="form" action="Login.php" >
+							<div class="form-group">
+								<input class="form-control" id="username" type="text" name="username" placeholder="USERNAME/EMAIL" required/>
+							</div>
+							<div class="form-group">
+								<input class="form-control" id="password" type="password" name="password" placeholder="PASSWORD" required/>
+							</div>
+							<div >
+								<input  id="chkbox" type="checkbox" name="chk" />KEEP ME LOGGED IN
+								<br>
+							</div>
+							<br>
+							<div class="form-group">
+								<input type="submit" name="btn" value="LOGIN" class="btn btn-round btn-b">
+							</div>
+							<div class="form-group">
+								<a href="#">Forgot Password?</a>
+							</div>
+						</form>
+						
+                                               
+						
+						
+						
+					</div>
+					<div class="col-sm-5">
+						<h4 class="font-alt">REGISTER</h4>
+						<hr class="divider-w mb-10">
+						
+						<form class="form" onSubmit="return validatePassword()">
+							<div class="form-group">
+								<input class="form-control" id="E-mail" type="text" name="email" placeholder="EMAIL" required/>
+							</div>
+							<div class="form-group">
+								<input class="form-control" id="username" type="text" name="username" placeholder="USERNAME" required/>
+							</div>
+							<div class="form-group">
+								
+								<input class="form-control" id="password" type="password" name="password"placeholder="PASSWORD"required/><span id="msg"></span>
+							</div>
+							<div class="form-group">
+								<input class="form-control" id="re-password" type="password" name="re-password" placeholder="RE-ENTER PASSWORD" required/><span id="rmsg"></span>
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-block btn-round btn-b" name="rbtn" value="SUBMIT">
+							</div>
+						</form>
+						
+						
+	
+					
+					</div>
+				</div>
+			</div>
+		</section>
+	
+	
+		
+	<footer class="footer bg-dark">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<p class="copyright font-alt">&copy; 2020&nbsp;<a href="index.html">AF</a>, ALL RIGHTS RESERVED</p>
+				</div>
+				<div class="col-sm-6">
+					<div class="footer-social-links">
+						<a href="#"><i class="fa fa-linkedin" style="font-size:20px"></i></a>
+						<a href="#"><i class="fa fa-twitter" style="font-size:20px"></i></a>
+						<a href="#"><i class="fa fa-facebook" style="font-size:20px"></i></a>
+						<a href="#"><i class="fa fa-instagram" style="font-size:20px"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	</div><div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div></main>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+	<!--  JavaScripts
+=============================================--><script src="assets/lib/jquery/dist/jquery.js"></script><script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script><script src="assets/lib/wow/dist/wow.js"></script><script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script><script src="assets/lib/isotope/dist/isotope.pkgd.js"></script><script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script><script src="assets/lib/flexslider/jquery.flexslider.js"></script><script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script><script src="assets/lib/smoothscroll.js"></script><script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script><script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script><script src="assets/js/plugins.js"></script><script src="assets/js/main.js"></script>
+
+
+
+</html>

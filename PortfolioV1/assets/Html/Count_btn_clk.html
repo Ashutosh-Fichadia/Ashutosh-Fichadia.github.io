@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	<script type="application/javascript">
+	
+	var n=1;
+		function myCount()
+		{
+			
+			var e=document.getElementById("myplace");
+			if(n>=50)
+				{
+					var col = "red";
+					e.innerHTML="<h1><font color ="+col+" >Count : "+n+"</font></h1>";		
+				}
+			else
+				{
+					e.innerHTML="<h1>Count : "+n+"</h1>";		
+				}
+			
+			n++;
+			
+		}
+	
+	</script>
+	
+	<input type="button" onClick="myCount()" value="Counter">
+	<div id="myplace">Count : </div>
+	
+	
+	
+	
+</body>
+</html>

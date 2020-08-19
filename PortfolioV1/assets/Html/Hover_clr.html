@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+	
+	
+	<table border="1" width="50%" cellpadding="10">
+	<tr>
+		<td onMouseOver="myOn(this,'red')" onMouseOut="myOff(this)">Menu1</td>	
+		
+		<td onMouseOver="myOn(this,'blue')" onMouseOut="myOff(this)">Menu2</td>	
+		
+		<td onMouseOver="myOn(this,'green')" onMouseOut="myOff(this)">Menu3</td>	
+		
+		<td onMouseOver="myOn(this,'yellow')" onMouseOut="myOff(this)">Menu4</td>	
+	</tr>
+	
+	</table>
+
+	<script>
+		function myOn(sr,clr)
+		{
+			sr.bgColor=clr;
+		}
+	
+		function myOff(sr)
+		{
+			
+			sr.bgColor="white";
+		}
+		
+	</script>
+	
+	
+</body>
+</html>
