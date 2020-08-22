@@ -152,7 +152,7 @@ svg {
 	left: 5%;
 }
 }
-	@media screen and (max-width:767.98px) {
+@media screen and (max-width:767.98px) {
 #day, #night {
 	position: absolute;
 	left: 71%;
@@ -203,6 +203,10 @@ svg {
 	background:#df5e6d;
 
 }
+		.mymail{
+			position: absolute;
+			left: 0%;
+		}
 
 }
 		@media screen and (max-width:450px) {
@@ -215,6 +219,10 @@ svg {
 	position: absolute;
 	left: 32%;
 }
+			.mymail{
+			position: absolute;
+			left: 0%;
+		}
 }
 		@media screen and (max-width:414px) {
 #day, #night {
@@ -226,6 +234,10 @@ svg {
 	position: absolute;
 	left: 29%;
 }
+			.mymail{
+			position: absolute;
+			left: 0%;
+		}
 }
 	@media screen and (max-width:380px) {
 #day, #night {
@@ -237,6 +249,10 @@ svg {
 	position: absolute;
 	left: 25%;
 }
+		.mymail{
+			position: absolute;
+			left: 0%;
+		}
 }
 		@media screen and (max-width:360px) {
 #day, #night {
@@ -248,6 +264,10 @@ svg {
 	position: absolute;
 	left: 21%;
 }
+			.mymail{
+			position: absolute;
+			left: 0%;
+		}
 }
 		@media screen and (max-width:320px) {
 #day, #night {
@@ -259,6 +279,10 @@ svg {
 	position: absolute;
 	left: 17%;
 }
+			.mymail{
+			position: absolute;
+			left: 0%;
+		}
 }
 	@media screen and (max-width:280px) {
 #day, #night {
@@ -272,6 +296,10 @@ svg {
 	left: 0%;
 	height: 25px;
 }
+		.mymail{
+			position: absolute;
+			left: 0%;
+		}
 }
 
 svg {
@@ -487,7 +515,13 @@ svg {
           </div>
         </div>
       </div>
-      <a href="#portfolio-section" class="mouse-wrap smoothscroll"> <span class="mouse"> <span class="scroll"></span> </span> <span class="mouse-label">Scroll</span> </a> </div>
+      <a href="#portfolio-section" class="mouse-wrap smoothscroll">
+		  <span class="mouse">
+		  	<span class="scroll"></span>
+		  </span>
+		  <span class="mouse-label">Scroll</span>
+	  </a>
+    </div>
     <div class="unslate_co--section" id="portfolio-section">
       <div class="container">
         <div class="relative">
@@ -875,7 +909,7 @@ svg {
           <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="176"></span> </div>
         <div class="row justify-content-between">
           <div class="col-md-6">
-           <img src="images/Gmail.PNG" style="width: 300px; position: relative;left: 215px;">
+           <img class="mymail" src="images/Gmail.PNG" style="width: 300px; position: relative;left: 10%;">
             <div id="form-message-warning" class="mt-4"></div>
             <div id="form-message-success"> Your message was sent, thank you! </div>
           </div>
@@ -967,6 +1001,8 @@ $("#day").click(function(){
 	gsap.to(".unslate_co--site-logo", 1, {color:"#fff"});
 	gsap.to("a:active", 1, {color:"#d63447"});
 	gsap.to(".unslate_co--site-mobile-menu ul li a", 1, {color:"#fff", ease: Power1.easeInOut});
+	//gsap.to(".reveal-wrap", 1, {background:"#000"});
+	//gsap.to(".cover", 1, {background:"#000"});
 	
 	
 	
@@ -985,22 +1021,21 @@ $("#night").click(function(){
   gsap.to(".star", 1, {opacity: 0, ease: Power1.easeInOut});
   gsap.to("#night", 1, {background: "#9cd6ef", borderColor: "#cad4d8", ease: Power1.easeInOut});
   gsap.to("#background", 1, {background: "white",color:"#000", ease: Power1.easeInOut});
-	
 	gsap.to(".linee", 1, {backgroundColor:"#000", ease: Power1.easeInOut});
 	gsap.to(".linee1", 1, {backgroundColor:"#000", ease: Power1.easeInOut});
 	gsap.to(".i_am", 1, {color:"#000", ease: Power1.easeInOut});
 	gsap.to(".pe", 1, {color:"#000"});
 	gsap.to(".heading-9", 1, {color:"#000"});
 	gsap.to(".paragraph", 1, {color:"#000"});
-	
 	gsap.to(".mouse-wrap .mouse ", 1, {border: "2px solid #000", ease: Power1.easeInOut});
 	gsap.to(".mouse-wrap .mouse .scroll", 1, {background: "#000", ease: Power1.easeInOut});
-	
-	 
 	gsap.to(".unslate_co--site-logo", 1, {color:"#000"});
 	gsap.to("a", 1, {color:"#000"});
 	gsap.to("a:active", 1, {color:"#d63447"});
 	gsap.to(".unslate_co--site-mobile-menu ul li a", 1, {color:"#fff", ease: Power1.easeInOut});
+	
+	//gsap.to(".reveal-wrap", 1, {background:"#fff"});
+	//gsap.to(".cover", 1, {background:"#fff"});
 
   $(this).css({"pointer-events": "none"});
   
